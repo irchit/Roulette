@@ -1,0 +1,3 @@
+class GameExecutionError(Exception):
+    pass
+
