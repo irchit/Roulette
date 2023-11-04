@@ -9,9 +9,9 @@ class Game:
 
     def __init__(self, id_game: int, player: Player):
         self.__id = id_game
-        self.__player = player
-        self.__numbers = []
-        self.__selections = []
+        self.player = player
+        self.numbers = []
+        self.selections = []
         self.__setup()
 
     def __setup(self):
@@ -41,13 +41,14 @@ class Game:
                 evens.append(int(number))
             else:
                 odds.append(int(number))
-            self.__numbers.append(Number(int(number), c))
-        self.__selections.append(Selection("odds", odds))
-        self.__selections.append(Selection("blacks", blacks))
-        self.__selections.append(Selection("reds", reds))
-        self.__selections.append(Selection("even", evens))
-        self.__selections.append(Selection("1st", list(range(1, 13))))
-        self.__selections.append(Selection("2st", list(range(13, 25))))
-        self.__selections.append(Selection("3st", list(range(25, 37))))
-        self.__selections.append(Selection("1-18", list(range(1, 19))))
-        self.__selections.append(Selection("19-36", list(range(19, 37))))
+            self.numbers.append(Number(int(number), c))
+        self.selections.append(Selection("odds", odds))
+        self.selections.append(Selection("blacks", blacks))
+        self.selections.append(Selection("reds", reds))
+        self.selections.append(Selection("even", evens))
+        self.selections.append(Selection("1st", list(range(1, 13))))
+        self.selections.append(Selection("2st", list(range(13, 25))))
+        self.selections.append(Selection("3st", list(range(25, 37))))
+        self.selections.append(Selection("1-18", list(range(1, 19))))
+        self.selections.append(Selection("19-36", list(range(19, 37))))
+

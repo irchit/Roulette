@@ -35,3 +35,6 @@ class BetManager:
 
     def get_bets(self):
         return self.__bets
+
+    def validate_bet(self, user_input):
+        pass

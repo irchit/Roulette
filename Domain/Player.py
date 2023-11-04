@@ -9,7 +9,7 @@ class Player:
             self.__username = username
             self.__balance = 1000
         else:
-            pass
+            self.__get_data(id_user)
         self.bet_manager: BetManager = BetManager()
 
     def get_id(self):
@@ -27,8 +27,10 @@ class Player:
     def add_balance(self, money):
         self.__balance += money
 
-    def get_data(self):
-        pass
+    def __get_data(self, id_user):
+        self.__id = id_user
+        self.__username = "none"
+        self.__balance = 1000
 
     def charge_card(self):
         pass
